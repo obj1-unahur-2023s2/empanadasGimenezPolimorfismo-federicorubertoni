@@ -1,0 +1,24 @@
+import empleados.*
+
+describe "test de galvan"{
+	
+	
+	
+	test "galvan sin deuda" {
+		assert.equals(0, galvan.totalDeuda())
+	}
+		test "galvan con dinero 0" {
+		assert.equals(0, galvan.totalDinero())
+	}
+	test "el sueldo de galvan es 150000"{
+		assert.equals(150000, galvan.sueldo())
+	}
+	
+	test "galvan gasta 40000"{
+		galvan.gastar(40000)
+		assert.equals(40000, galvan.totalDeuda())
+		assert.equals(0, galvan.totalDinero())
+	}
+
+	
+}
